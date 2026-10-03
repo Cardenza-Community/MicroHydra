@@ -11,3 +11,5 @@
 # Python cache files
 __pycache__/
 tools/__pycache__/
+baseline*.log
+cardenza*.log
