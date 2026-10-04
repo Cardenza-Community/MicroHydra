@@ -1,0 +1,8 @@
+# Production Cardenza has no PSRAM; never initialize its bus or heap.
+# CONFIG_SPIRAM is not set
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# Keep UART0 off GPIO43: it is LRCK and the microphone clock.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y

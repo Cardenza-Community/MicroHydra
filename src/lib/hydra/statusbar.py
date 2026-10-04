@@ -35,6 +35,10 @@ class StatusBar:
         """Initialize the statusbar."""
         global battery  # noqa: PLW0603
 
+        # mh_if CARDENZA:
+        # enable_battery = False  # No battery ADC; GPIO10 controls USB routing.
+        # mh_end_if
+
         if enable_battery:
             # If drawing battery status, import battlevel and icons
             from lib import battlevel

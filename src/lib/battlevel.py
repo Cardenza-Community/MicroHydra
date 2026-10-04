@@ -20,6 +20,8 @@ class Battery:
 
     def __init__(self):
         """Create the Battery object."""
+        if _MH_BATT_ADC is None:
+            raise NotImplementedError("This device has no battery ADC")
         #init the ADC for the battery
         self.adc = machine.ADC(_MH_BATT_ADC)
         self.adc.atten(machine.ADC.ATTN_11DB) # needed to get appropriate range
